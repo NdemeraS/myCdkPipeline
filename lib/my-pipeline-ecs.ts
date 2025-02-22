@@ -23,9 +23,9 @@ export class EcsTestStack extends cdk.Stack {
 
     taskDefinition.addContainer('DefaultContainer', {
       image: ecs.ContainerImage.fromRegistry("amazon/amazon-ecs-sample"),
-      memoryLimitMiB: 1028,
+      memoryLimitMiB: 1048,
       memoryReservationMiB: 512,
-      // cpu: 1024,
+      cpu: 1024,
     });
 
     // Instantiate an Amazon ECS Service
